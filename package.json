@@ -1,0 +1,8 @@
+{
+  "name": "clean-dater",
+  "version": "1.0.0",
+  "repository": "git@github.com:MatthewCoder13/clean-dater.git",
+  "author": "Matthew Coder <matthewcoder@tutamail.com>",
+  "license": "MIT",
+  "type": "module"
+}
