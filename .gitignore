@@ -21,3 +21,11 @@ devenv.local.yaml
 
 # node_modules
 node_modules/
+
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
