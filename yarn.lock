@@ -3813,11 +3813,9 @@ __metadata:
   resolution: "clean-dater@workspace:."
   dependencies:
     "@nuxt/ui": "npm:^4.11.0"
-    "@vitejs/plugin-vue": "npm:^6.0.8"
     nuxt: "npm:^4.5.2"
     tailwindcss: "npm:^4.3.3"
     typescript: "npm:^7.0.2"
-    vite: "npm:^8.2.2"
     vue: "npm:^3.5.41"
     vue-router: "npm:^5.2.0"
   languageName: unknown
@@ -8929,7 +8927,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^8.0.0, vite@npm:^8.2.0, vite@npm:^8.2.2":
+"vite@npm:^8.0.0, vite@npm:^8.2.0":
   version: 8.2.2
   resolution: "vite@npm:8.2.2"
   dependencies:
