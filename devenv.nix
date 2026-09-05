@@ -35,6 +35,7 @@ let
 in
 {
   packages = [
+    pkgs.vscode
     pkgs.git
     pkgs.python3
   ] ++ libs;
