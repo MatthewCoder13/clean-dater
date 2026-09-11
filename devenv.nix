@@ -1,71 +1,13 @@
-{ pkgs, lib, config, inputs, ... }:
+{ pkgs, lib, config, inputs, ... }: {
+  packages = with pkgs; [
+    vscode
+    git
 
-let
-  libs = [
-    pkgs.libGL
-    pkgs.glib
-    pkgs.nspr
-    pkgs.nss
-    pkgs.atk
-    pkgs.cups
-    pkgs.dbus
-    pkgs.cairo
-    pkgs.gtk3
-    pkgs.pango
-    pkgs.expat
-    pkgs.libxcb
-    pkgs.libxkbcommon
-    pkgs.alsa-lib
-    pkgs.libgbm
-    pkgs.libdrm
-    pkgs.pkg-config
-    pkgs.stdenv.cc.cc
-
-    pkgs.libx11
-    pkgs.libxtst
-    pkgs.libxi
-    pkgs.libxinerama
-    pkgs.libxrandr
-    pkgs.libxext
-    pkgs.libxcomposite
-    pkgs.libxdamage
-    pkgs.libxfixes
-    pkgs.xorgproto
+    pkg-config
+    wrapGAppsHook4
+    librsvg
+    webkitgtk_4_1
   ];
-in
-{
-  packages = [
-    pkgs.vscode
-    pkgs.git
-    pkgs.python3
-  ] ++ libs;
-
-  env = {
-    LD_LIBRARY_PATH = lib.makeLibraryPath (libs ++ [ pkgs.stdenv.cc.cc.lib ]);
-    CPATH = lib.makeSearchPathOutput "dev" "include" [
-      pkgs.stdenv.cc.libc
-      pkgs.xorgproto
-      pkgs.libx11
-      pkgs.libxtst
-      pkgs.libxi
-      pkgs.libxinerama
-      pkgs.libxrandr
-      pkgs.libxext
-    ];
-    LIBRARY_PATH = lib.makeLibraryPath [
-      pkgs.stdenv.cc.libc
-      pkgs.libx11
-      pkgs.libxtst
-      pkgs.libxi
-      pkgs.libxinerama
-      pkgs.libxrandr
-      pkgs.libxext
-    ];
-    CFLAGS = "-D_GNU_SOURCE -Wno-implicit-function-declaration -Wno-error=implicit-function-declaration";
-    CPPFLAGS = "-D_GNU_SOURCE -Wno-implicit-function-declaration -Wno-error=implicit-function-declaration";
-    CXXFLAGS = "-D_GNU_SOURCE";
-    NIX_CFLAGS_COMPILE = "-D_GNU_SOURCE -Wno-implicit-function-declaration -Wno-error=implicit-function-declaration";
-  };
 
   languages = {
     javascript = {
@@ -75,5 +17,13 @@ in
       yarn.enable = true;
     };
     typescript.enable = true;
+    rust = {
+      enable = true;
+      components = [ "cargo" "rustc" ];
+    };
   };
+  
+  enterShell = ''
+    export XDG_DATA_DIRS="$GSETTINGS_SCHEMAS_PATH"
+  '';
 }
