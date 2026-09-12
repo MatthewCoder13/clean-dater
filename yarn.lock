@@ -876,6 +876,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iconify-json/lucide@npm:^1.2.131":
+  version: 1.2.131
+  resolution: "@iconify-json/lucide@npm:1.2.131"
+  dependencies:
+    "@iconify/types": "npm:*"
+  checksum: 10c0/8c454a4b6b082c44a09fda3055a75ee66042cd1ab3526c23518a6486ce7b554cd5552bffd623ae65997f336af26eb18aa02f59b4c48c621f6eebc6d234218737
+  languageName: node
+  linkType: hard
+
 "@iconify/collections@npm:^1.0.727":
   version: 1.0.728
   resolution: "@iconify/collections@npm:1.0.728"
@@ -3940,6 +3949,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "clean-dater@workspace:."
   dependencies:
+    "@iconify-json/lucide": "npm:^1.2.131"
     "@nuxt/ui": "npm:^4.11.0"
     "@tauri-apps/api": "npm:^2.11.1"
     "@tauri-apps/cli": "npm:^2.11.4"
