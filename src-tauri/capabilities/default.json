@@ -5,8 +5,17 @@
   "windows": [
     "main"
   ],
-  "permissions": [
+"permissions": [
     "core:default",
-    "store:default"
+    "store:default",
+    "dialog:default",
+    "fs:allow-write-file",
+    {
+      "identifier": "fs:scope",
+      "description": "Дозвіл записувати PDF у місце, обране користувачем у діалозі «Зберегти»",
+      "allow": [
+        { "path": "**" }
+      ]
+    }
   ]
 }

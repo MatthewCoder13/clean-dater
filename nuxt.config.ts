@@ -12,9 +12,19 @@ export default defineNuxtConfig({
   vite: {
     clearScreen: false,
     envPrefix: ['VITE_', 'TAURI_'],
+    resolve: {
+      // html2pdf.js використовує html2canvas, який не підтримує кольори
+      // Tailwind v4 (oklch) — підставляємо сумісний форк html2canvas-pro
+      alias: {
+        html2canvas: 'html2canvas-pro',
+      },
+    },
     server: {
       strictPort: true,
     },
   },
   ignore: ['**/src-tauri/**'],
+  imports: {
+    dirs: ['constants'],
+  },
 });
