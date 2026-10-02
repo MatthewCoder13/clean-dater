@@ -22,7 +22,7 @@
           <thead>
             <tr class="bg-neutral-100">
               <th class="w-10 border border-neutral-300 px-2 py-1.5 text-left font-semibold">№</th>
-              <th class="border border-neutral-300 px-2 py-1.5 text-left font-semibold">Дата</th>
+              <th class="border border-neutral-300 px-2 py-1.5 text-left font-semibold">Дати</th>
               <th class="border border-neutral-300 px-2 py-1.5 text-left font-semibold">Група</th>
             </tr>
           </thead>
