@@ -2337,6 +2337,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@tauri-apps/api@npm:^2.12.0":
+  version: 2.12.1
+  resolution: "@tauri-apps/api@npm:2.12.1"
+  checksum: 10c0/03efa7deb1517e9310367be22b6d980f7bb8e96677d97af868288c322da2e5dc87153e31ef9d585a374b7f6eee584a2dd761328250dd3007d0bbffb8eb597e79
+  languageName: node
+  linkType: hard
+
 "@tauri-apps/cli-darwin-arm64@npm:2.11.4":
   version: 2.11.4
   resolution: "@tauri-apps/cli-darwin-arm64@npm:2.11.4"
@@ -2482,6 +2489,15 @@ __metadata:
   dependencies:
     "@tauri-apps/api": "npm:^2.11.0"
   checksum: 10c0/9d7932a10603531014a5a422140d41c7483f429a55a1c711745bdee3a87aae48a7de25354e9496a981e98c5dbefd586a90eeacd8a4779beca6686ac7142a04ee
+  languageName: node
+  linkType: hard
+
+"@tauri-apps/plugin-updater@npm:~2":
+  version: 2.13.1
+  resolution: "@tauri-apps/plugin-updater@npm:2.13.1"
+  dependencies:
+    "@tauri-apps/api": "npm:^2.12.0"
+  checksum: 10c0/d26ecd56ebfb5accac93fbcad70968b9a59ab7a592a7094dd53034b4228d5e57a154c78b21e8b0fef6f69f8656709d04b8e9eea7c690bffc6df8c6b9726d5f85
   languageName: node
   linkType: hard
 
@@ -4034,6 +4050,7 @@ __metadata:
     "@tauri-apps/plugin-dialog": "npm:~2"
     "@tauri-apps/plugin-fs": "npm:~2"
     "@tauri-apps/plugin-store": "npm:~2"
+    "@tauri-apps/plugin-updater": "npm:~2"
     html2canvas-pro: "npm:^2.4.3"
     html2pdf.js: "npm:^0.14.0"
     nuxt: "npm:^4.5.2"
