@@ -25,6 +25,7 @@
   },
   "bundle": {
     "active": true,
+    "createUpdaterArtifacts": true,
     "targets": "all",
     "icon": [
       "icons/32x32.png",
@@ -35,6 +36,14 @@
     ],
     "android": {
       "debugApplicationIdSuffix": ".debug"
+    }
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEZEODJFNTM5OEEzQTkwRDkKUldUWmtEcUtPZVdDL2RJdzVnTFQ2VzVKVmN3NjZjV0YyYnI3OUs2TXBJV1UrVC9GSmZ6MHVsbnIK",
+      "endpoints": [
+        "https://github.com/MatthewCoder13/clean-dater/releases/latest/download/latest.json"
+      ]
     }
   }
 }
