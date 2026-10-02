@@ -1,6 +1,6 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
-  "productName": "clean-dater",
+  "productName": "Clean Dater",
   "version": "1.0.0",
   "identifier": "com.matthewcoder13.cleandater",
   "build": {
